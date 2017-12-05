@@ -18,3 +18,10 @@ executable cook
                       containers,
                       mtl,
                       pretty
+  other-modules:      DeBruijn,
+                      HOAS,
+                      IdInt,
+                      Lambda,
+                      Misc,
+                      Simple,
+                      Unique

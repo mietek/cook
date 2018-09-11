@@ -8,6 +8,10 @@ homepage:           https://github.com/mietek/cook
 extra-source-files: README.md
 synopsis:           The λ-calculus in Haskell in four different ways
 description:        A runnable version of Augustsson’s paper describing how to implement the λ-calculus in Haskell in four different ways.
+tested-with:   GHC == 8.4.3
+               GHC == 8.2.2
+               GHC == 8.0.2
+               GHC == 7.10.3
 
 executable cook
   hs-source-dirs:     src

@@ -1,3 +1,5 @@
+{-# LANGUAGE CPP #-}
+
 -- 2.1 Lambda
 -- The Lambda module implements a simple abstract syntax for the λ-calculus together
 -- with a parser and a printer for it.  It also exports a simple type of identifiers
@@ -9,6 +11,10 @@ import Data.List (span, union, (\\))
 import Data.Char (isAlphaNum)
 import Text.PrettyPrint.HughesPJ (Doc, renderStyle, style, text, (<>), (<+>), parens)
 import Text.ParserCombinators.ReadP
+
+#if MIN_VERSION_base(4,11,0)
+import Prelude hiding ((<>))
+#endif
 
 -- The LC type of λ-terms is parametrised over the type of the variables.  It has
 -- constructors for variables, λ-abstraction, and application.
